@@ -1,0 +1,413 @@
+@import "./reset.scss";
+@import "./color.scss";
+@import "./fonts.scss";
+@import "./component.scss";
+@import "./graphics.scss";
+@import "./scheme.scss";
+body,
+button {
+    font-family: $themeFont;
+    color: $themeBlack;
+}
+
+.mobileButton,
+.mobileButtonContainer {
+    display: none;
+}
+
+// header
+.mainContainer {
+    max-width: 1010px;
+    margin: 0 auto;
+    .credit {
+        font-size: 24px;
+    }
+}
+
+header,
+.mainContainer {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-gap: 16px;
+}
+
+.headerContainer {
+    grid-column: 1 / end;
+}
+
+header {
+    // position: fixed;
+    // background-color: gray;
+    grid-column: 1 / end;
+    .wordMark {
+        grid-column: 1/5;
+    }
+    button {
+        grid-column: 9/11;
+    }
+    .bentoContainer {
+        cursor: pointer;
+        z-index: 200;
+        float: right;
+        grid-column: 11 / end;
+        //
+        right: -45px;
+        position: relative;
+        .bento {
+            .cls-1 {
+                fill: black;
+            }
+            z-index: 30;
+        }
+    }
+    * {
+        margin: auto 0;
+    }
+    padding: 80px 0px;
+}
+
+//
+.schemeHeader {
+    grid-column: 1/4;
+    position: relative;
+    // top: 60px;
+    margin-bottom: 20px;
+    width: 80%;
+    span {
+        margin-top: 30px;
+    }
+}
+
+.schemesContainer {
+    grid-column: 4/11;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.scheme {
+    background-color: #efefef;
+    height: 154px;
+    width: calc(50% - 8px);
+    margin-bottom: 16px;
+    display: flex;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+}
+
+.newSchemes {
+    .scheme {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // height: unset;
+        margin-bottom: 80px;
+        .colorBox {
+            &:hover {
+                width: inherit;
+            }
+            height: inherit;
+        }
+        .likeOrNot {
+            grid-column: 1 / end;
+            width: max-content;
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
+}
+
+.headerActive {
+    .bentoContainer {
+        .bento {
+            .cls-1 {
+                fill: white;
+            }
+            z-index: 30;
+        }
+    }
+}
+
+///////
+.menu {
+    background-color: $themeBlack;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 15;
+    color: white;
+    //
+    vertical-align: middle;
+    //
+    position: fixed;
+    .menuItemsContainer {
+        height: inherit;
+        margin: 0 auto;
+        margin-top: 80px;
+        max-width: 1010px;
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        position: relative;
+        height: calc(100vh - 80px);
+        margin: 0 auto;
+        top: 40px;
+        position: sticky;
+        top: 120px;
+        h1 {
+            margin: 0px;
+        }
+        .typesContainer {
+            grid-column: 1 / end;
+            display: flex;
+            justify-content: space-between;
+            .typeBtn {
+                font-size: 110px;
+                height: auto;
+                width: auto;
+                border-radius: 6px;
+                // padding: 0px 40px;
+                padding: 0px 30px;
+            }
+            .unselectedType {
+                background: transparent;
+                border: none;
+                color: white;
+                &:hover {
+                    // outline: 2px solid $accentColor;
+                    border: 2px solid $accentColor;
+                    border-radius: 6px;
+                }
+                &:active {
+                    background-color: $accentColor;
+                }
+            }
+        }
+        a {
+            padding: unset;
+        }
+        .type {
+            cursor: pointer;
+        }
+    }
+    .credit {
+        grid-column: 1 / end;
+        bottom: 60px;
+        position: relative;
+    }
+}
+
+//
+@media (max-width: 1240px) {
+    header,
+    .mainContainer {
+        max-width: unset;
+    }
+    .mainContainer {
+        padding: 0px 60px;
+    }
+    .scheme {
+        height: 120px;
+    }
+    header {
+        .bentoContainer {
+            right: -20px;
+        }
+    }
+    .menu {
+        .menuItemsContainer {
+            max-width: 90%;
+            padding: 0px 120px;
+            .typesContainer {
+                .typeBtn {
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}
+
+//
+@media (max-width: 960px) {
+    .menu {
+        .menuItemsContainer {
+            max-width: 100%;
+            padding: 0px 80px;
+            top: 80px;
+            .typesContainer {
+                .typeBtn {
+                    font-size: 8.5vw;
+                }
+            }
+        }
+    }
+    .schemeHeader {
+        display: none;
+    }
+    .schemesContainer {
+        grid-column: 1 / end;
+    }
+    .newSchemes,
+    .uploadSection,
+    .uploadText {
+        grid-column: 1 / end !important;
+    }
+    .scheme {
+        height: 140px;
+        height: 20vw;
+    }
+    header {
+        padding: 60px 0px;
+        .wordMark {
+            width: 120px;
+        }
+        .headerBtn {
+            right: 16px;
+            position: relative;
+        }
+        .bentoContainer {
+            right: 0px;
+            right: unset;
+        }
+    }
+}
+
+//
+@media (max-width: 690px) {
+    .mainContainer {
+        padding: 0px 20px;
+    }
+    header {
+        padding: 20px 0px;
+    }
+    .uploadText,
+    .uploadSection {
+        margin: unset !important;
+    }
+    .uploadSection {
+        height: 100px !important;
+    }
+    .menu {
+        .menuItemsContainer {
+            max-width: 100%;
+            padding: 0px 30px;
+            .typesContainer {
+                .typeBtn {
+                    font-size: 8.5vw;
+                }
+            }
+        }
+    }
+}
+
+//
+@media (max-width: 550px) {
+    .menu {
+        .menuItemsContainer {
+            // max-width: 100%;
+            padding: 0px 20px;
+            .typesContainer {
+                flex-wrap: wrap;
+                flex-direction: column;
+                display: flex;
+                .typeBtn {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    height: 70px;
+                    border-radius: 2px;
+                }
+            }
+            .credit {
+                text-align: center;
+                font-size: 14px;
+                opacity: 0.7;
+            }
+        }
+    }
+    .uploadText {
+        font-size: 16px;
+    }
+    .uploadSection {
+        border: unset !important;
+    }
+    .mobileButtonContainer {
+        display: unset;
+        grid-column: 1 / end;
+        bottom: 60px;
+        right: 20px;
+        left: 20px;
+        margin: 0 auto;
+        display: grid;
+        position: fixed;
+    }
+    .mobileButton {
+        display: unset;
+        height: 70px;
+        grid-column: 1 / end;
+        width: 340px;
+        margin: 0px;
+        margin: 0 auto;
+        padding: 0px;
+        position: sticky;
+        z-index: 10;
+    }
+    header {
+        .wordMark {
+            width: 86px;
+            cursor: pointer;
+        }
+        .headerBtn {
+            display: none;
+        }
+    }
+    .scheme {
+        background-color: #efefef;
+        height: 154px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .schemesContainer {
+        margin-bottom: 180px;
+    }
+}
+
+@media (max-width: 420px) {
+    .uploadSection {
+        height: unset !important;
+        box-shadow: unset !important;
+        &.withBG {
+            height: 120px !important;
+        }
+    }
+    .uploadText {
+        font-size: 14px;
+    }
+    .mobileButton {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+.blur {
+    position: unset !important;
+    height: 100vh;
+    overflow-y: hidden;
+    header {
+        // max-width: 1010px;
+        max-width: unset;
+        grid-column: 1 / end;
+    }
+}
+
+@import "./create.scss";
+.inheritContainer {
+    width: -webkit-fill-available;
+    grid-column: 1 / end;
+    padding: unset;
+}
+
+label {
+    cursor: pointer;
+}

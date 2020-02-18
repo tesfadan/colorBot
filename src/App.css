@@ -1,0 +1,725 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a,
+.link {
+  cursor: pointer;
+}
+
+h3,
+h2,
+h4 {
+  font-weight: 300;
+}
+
+button {
+  transition: 0.15s ease-in;
+  width: 170px;
+  height: 70px;
+  background-color: #366769;
+  border: #366769 2px solid;
+  border-radius: 2px;
+  font-size: 20px;
+  outline: unset;
+  color: white !important;
+  cursor: hand;
+}
+button.outline {
+  background-color: white;
+  color: #366769;
+}
+button.outline:hover {
+  background-color: #366769;
+  color: white !important;
+}
+button.mobileButton {
+  filter: drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.233));
+}
+button.filledButton {
+  color: white !important;
+}
+button.headerBtn {
+  color: #366769 !important;
+}
+@media (max-width: 420px) {
+  button.fullWidth {
+    width: 80%;
+  }
+}
+.inputLabel {
+  transition: 0.15s ease-in;
+  margin: auto;
+  height: 70px;
+  width: inherit;
+  padding: 0px 40px;
+  border-radius: 2px;
+  display: flex;
+  background-color: #366769;
+  border: 2px solid #366769;
+}
+.inputLabel * {
+  font-size: 20px;
+}
+.inputLabel:hover {
+  background-color: white;
+  border: 2px solid #366769;
+  border-radius: 3px;
+}
+.inputLabel:hover span,
+.inputLabel:hover h3 {
+  color: #366769 !important;
+}
+.inputLabel span {
+  margin: auto;
+  color: white;
+}
+@media (max-width: 420px) {
+  .inputLabel.fullWidth {
+    width: 80%;
+  }
+}
+
+.withBG .inputLabel {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+@media (max-width: 420px) {
+  .withBG .inputLabel.fullWidth {
+    width: 60% !important;
+  }
+}
+
+input[type=file] {
+  display: none;
+}
+
+.wordMark {
+  cursor: pointer;
+  transition: 0.25s;
+}
+.wordMark .cls-1 {
+  fill: #656565;
+  font-size: 34px;
+  font-family: IBMPlexSans-Bold, IBM Plex Sans;
+  font-weight: 700;
+}
+.wordMark .cls-2,
+.wordMark .cls-3,
+.wordMark .cls-4,
+.wordMark .cls-5 {
+  fill: #656565;
+}
+.wordMark:hover {
+  transition: 0.25s;
+}
+.wordMark:hover .cls-2 {
+  fill: #ac57bc;
+}
+.wordMark:hover .cls-3 {
+  fill: #95b9e3;
+}
+.wordMark:hover .cls-4 {
+  fill: #f7cc6c;
+}
+.wordMark:hover .cls-5 {
+  fill: #fe6f6f;
+}
+
+.bentoContainer .bento .cls-1 {
+  fill: #1a1a1a;
+}
+
+.loveIcon .cls-1 {
+  fill: #adadad;
+}
+
+.xIcon .cls-1 {
+  fill: #adadad;
+}
+
+.scheme {
+  display: flex;
+  grid-template-columns: repeat(4, 1f);
+  background-color: white;
+}
+.scheme .colorBox {
+  transition: 0.055s ease-in;
+  height: 100%;
+  width: 100%;
+  grid-row: 1/4;
+  display: flex;
+  cursor: pointer;
+}
+.scheme .colorBox:hover {
+  transition: 0.055s ease-out;
+  width: 200%;
+}
+.scheme .colorBox:hover span {
+  opacity: 1;
+  margin: auto;
+  text-align: center;
+}
+.scheme .colorBox:active {
+  width: 250%;
+}
+.scheme .colorBox span {
+  opacity: 0;
+}
+.scheme .likeOrNot {
+  grid-row: 4;
+  height: max-content;
+  bottom: 0px;
+  /* position: inherit; */
+  display: flex;
+  grid-column: 1/end;
+  margin: auto 0;
+}
+.scheme .likeOrNot span {
+  margin-right: 0px;
+  cursor: pointer;
+  position: relative;
+}
+.scheme .likeOrNot span:hover * {
+  fill: #366769;
+}
+
+body,
+button {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #1A1A1A;
+}
+
+.mobileButton,
+.mobileButtonContainer {
+  display: none;
+}
+
+.mainContainer {
+  max-width: 1010px;
+  margin: 0 auto;
+}
+.mainContainer .credit {
+  font-size: 24px;
+}
+
+header,
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-gap: 16px;
+}
+
+.headerContainer {
+  grid-column: 1/end;
+}
+
+header {
+  grid-column: 1/end;
+  padding: 80px 0px;
+}
+header .wordMark {
+  grid-column: 1/5;
+}
+header button {
+  grid-column: 9/11;
+}
+header .bentoContainer {
+  cursor: pointer;
+  z-index: 200;
+  float: right;
+  grid-column: 11/end;
+  right: -45px;
+  position: relative;
+}
+header .bentoContainer .bento {
+  z-index: 30;
+}
+header .bentoContainer .bento .cls-1 {
+  fill: black;
+}
+header * {
+  margin: auto 0;
+}
+
+.schemeHeader {
+  grid-column: 1/4;
+  position: relative;
+  margin-bottom: 20px;
+  width: 80%;
+}
+.schemeHeader span {
+  margin-top: 30px;
+}
+
+.schemesContainer {
+  grid-column: 4/11;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.scheme {
+  background-color: #efefef;
+  height: 154px;
+  width: calc(50% - 8px);
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.newSchemes .scheme {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 80px;
+}
+.newSchemes .scheme .colorBox {
+  height: inherit;
+}
+.newSchemes .scheme .colorBox:hover {
+  width: inherit;
+}
+.newSchemes .scheme .likeOrNot {
+  grid-column: 1/end;
+  width: max-content;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.headerActive .bentoContainer .bento {
+  z-index: 30;
+}
+.headerActive .bentoContainer .bento .cls-1 {
+  fill: white;
+}
+
+.menu {
+  background-color: #1A1A1A;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 15;
+  color: white;
+  vertical-align: middle;
+  position: fixed;
+}
+.menu .menuItemsContainer {
+  height: inherit;
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 1010px;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  position: relative;
+  height: calc(100vh - 80px);
+  margin: 0 auto;
+  top: 40px;
+  position: sticky;
+  top: 120px;
+}
+.menu .menuItemsContainer h1 {
+  margin: 0px;
+}
+.menu .menuItemsContainer .typesContainer {
+  grid-column: 1/end;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .menuItemsContainer .typesContainer .typeBtn {
+  font-size: 110px;
+  height: auto;
+  width: auto;
+  border-radius: 6px;
+  padding: 0px 30px;
+}
+.menu .menuItemsContainer .typesContainer .unselectedType {
+  background: transparent;
+  border: none;
+  color: white;
+}
+.menu .menuItemsContainer .typesContainer .unselectedType:hover {
+  border: 2px solid #366769;
+  border-radius: 6px;
+}
+.menu .menuItemsContainer .typesContainer .unselectedType:active {
+  background-color: #366769;
+}
+.menu .menuItemsContainer a {
+  padding: unset;
+}
+.menu .menuItemsContainer .type {
+  cursor: pointer;
+}
+.menu .credit {
+  grid-column: 1/end;
+  bottom: 60px;
+  position: relative;
+}
+
+@media (max-width: 1240px) {
+  header,
+.mainContainer {
+    max-width: unset;
+  }
+
+  .mainContainer {
+    padding: 0px 60px;
+  }
+
+  .scheme {
+    height: 120px;
+  }
+
+  header .bentoContainer {
+    right: -20px;
+  }
+
+  .menu .menuItemsContainer {
+    max-width: 90%;
+    padding: 0px 120px;
+  }
+  .menu .menuItemsContainer .typesContainer .typeBtn {
+    font-size: 80px;
+  }
+}
+@media (max-width: 960px) {
+  .menu .menuItemsContainer {
+    max-width: 100%;
+    padding: 0px 80px;
+    top: 80px;
+  }
+  .menu .menuItemsContainer .typesContainer .typeBtn {
+    font-size: 8.5vw;
+  }
+
+  .schemeHeader {
+    display: none;
+  }
+
+  .schemesContainer {
+    grid-column: 1/end;
+  }
+
+  .newSchemes,
+.uploadSection,
+.uploadText {
+    grid-column: 1/end !important;
+  }
+
+  .scheme {
+    height: 140px;
+    height: 20vw;
+  }
+
+  header {
+    padding: 60px 0px;
+  }
+  header .wordMark {
+    width: 120px;
+  }
+  header .headerBtn {
+    right: 16px;
+    position: relative;
+  }
+  header .bentoContainer {
+    right: 0px;
+    right: unset;
+  }
+}
+@media (max-width: 690px) {
+  .mainContainer {
+    padding: 0px 20px;
+  }
+
+  header {
+    padding: 20px 0px;
+  }
+
+  .uploadText,
+.uploadSection {
+    margin: unset !important;
+  }
+
+  .uploadSection {
+    height: 100px !important;
+  }
+
+  .menu .menuItemsContainer {
+    max-width: 100%;
+    padding: 0px 30px;
+  }
+  .menu .menuItemsContainer .typesContainer .typeBtn {
+    font-size: 8.5vw;
+  }
+}
+@media (max-width: 550px) {
+  .menu .menuItemsContainer {
+    padding: 0px 20px;
+  }
+  .menu .menuItemsContainer .typesContainer {
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
+  }
+  .menu .menuItemsContainer .typesContainer .typeBtn {
+    font-size: 18px;
+    margin-bottom: 20px;
+    height: 70px;
+    border-radius: 2px;
+  }
+  .menu .menuItemsContainer .credit {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+
+  .uploadText {
+    font-size: 16px;
+  }
+
+  .uploadSection {
+    border: unset !important;
+  }
+
+  .mobileButtonContainer {
+    display: unset;
+    grid-column: 1/end;
+    bottom: 60px;
+    right: 20px;
+    left: 20px;
+    margin: 0 auto;
+    display: grid;
+    position: fixed;
+  }
+
+  .mobileButton {
+    display: unset;
+    height: 70px;
+    grid-column: 1/end;
+    width: 340px;
+    margin: 0px;
+    margin: 0 auto;
+    padding: 0px;
+    position: sticky;
+    z-index: 10;
+  }
+
+  header .wordMark {
+    width: 86px;
+    cursor: pointer;
+  }
+  header .headerBtn {
+    display: none;
+  }
+
+  .scheme {
+    background-color: #efefef;
+    height: 154px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .schemesContainer {
+    margin-bottom: 180px;
+  }
+}
+@media (max-width: 420px) {
+  .uploadSection {
+    height: unset !important;
+    box-shadow: unset !important;
+  }
+  .uploadSection.withBG {
+    height: 120px !important;
+  }
+
+  .uploadText {
+    font-size: 14px;
+  }
+
+  .mobileButton {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+.blur {
+  position: unset !important;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.blur header {
+  max-width: unset;
+  grid-column: 1/end;
+}
+
+.uploadSection {
+  border: solid 1px #656565;
+  grid-column: 3/10;
+  height: 140px;
+  display: flex;
+  margin-top: -20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.uploadSection button {
+  justify-self: center;
+  margin: auto;
+}
+.uploadSection .selectedImage {
+  width: 100%;
+  position: absolute;
+}
+
+.uploadInput {
+  border: solid 1px #656565;
+  margin: auto;
+  display: flex;
+}
+.uploadInput * {
+  margin: auto;
+}
+
+.uploadText {
+  grid-column: 3/10;
+  position: relative;
+  margin-top: -50px;
+  text-align: center;
+  color: #656565;
+}
+@media (max-width: 560px) {
+  .uploadText {
+    display: none;
+  }
+}
+
+.newSchemes {
+  margin-top: 20px;
+  grid-column: 3/10;
+}
+
+.newScheme {
+  background-color: white;
+}
+
+.withBG {
+  border: unset !important;
+}
+.withBG .inputLabel {
+  background-color: white;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+.withBG .inputLabel * {
+  color: #1A1A1A;
+}
+
+label {
+  width: 100%;
+}
+label span {
+  margin: auto;
+}
+label h3 {
+  color: white;
+  margin: auto;
+  height: max-content;
+  width: max-content;
+  vertical-align: middle;
+  margin: auto;
+}
+
+.mobileLabel {
+  display: flex;
+}
+
+.inheritContainer {
+  width: -webkit-fill-available;
+  grid-column: 1/end;
+  padding: unset;
+}
+
+label {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=App.css.map */

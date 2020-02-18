@@ -1,0 +1,90 @@
+button {
+    transition: 0.15s ease-in;
+    width: 170px;
+    height: 70px;
+    background-color: $accentColor;
+    border: $accentColor 2px solid;
+    border-radius: 2px;
+    font-size: 20px;
+    // font-weight: 500;
+    outline: unset;
+    color: white !important;
+    &.outline {
+        background-color: white;
+        color: $accentColor;
+        &:hover {
+            background-color: $accentColor;
+            color: white !important;
+        }
+    }
+    &.mobileButton {
+        filter: drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.233))
+    }
+    cursor: hand;
+    &.filledButton {
+        color: white !important;
+    }
+    &.headerBtn {
+        color: $accentColor !important;
+    }
+    @media (max-width: 420px) {
+        &.fullWidth {
+            width: 80%;
+        }
+    }
+    &.createButton {
+        // background-color: white;
+        // color: $accentColor !important;
+        // border: unset !important;
+    }
+}
+
+.inputLabel {
+    transition: 0.15s ease-in;
+    margin: auto;
+    height: 70px;
+    width: inherit;
+    padding: 0px 40px;
+    border-radius: 2px;
+    display: flex;
+    background-color: $accentColor;
+    border: 2px solid $accentColor;
+    * {
+        font-size: 20px;
+    }
+    &:hover {
+        background-color: white;
+        border: 2px solid $accentColor;
+        border-radius: 3px;
+        span,
+        h3 {
+            color: $accentColor !important;
+        }
+    }
+    span {
+        margin: auto;
+        color: white;
+    }
+    @media (max-width: 420px) {
+        &.fullWidth {
+            width: 80%;
+        }
+    }
+}
+
+.withBG {
+    .inputLabel {
+        @media (max-width: 420px) {
+            &.fullWidth {
+                width: 60% !important;
+            }
+        }
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}

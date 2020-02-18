@@ -1,0 +1,52 @@
+.scheme {
+    display: flex;
+    // display: grid;
+    grid-template-columns: repeat(4, 1f);
+    background-color: white;
+    .colorBox {
+        transition: 0.055s ease-in;
+        height: 100%;
+        width: 100%;
+        grid-row: 1/4;
+        &:hover {
+            transition: 0.055s ease-out;
+            width: 200%;
+            span {
+                opacity: 1;
+                margin: auto;
+                text-align: center;
+            }
+        }
+        &:active {
+            width: 250%;
+        }
+        display: flex;
+        cursor: pointer;
+        span {
+            opacity: 0;
+        }
+    }
+    .likeOrNot {
+        // width: 100%;
+        grid-row: 4;
+        height: max-content;
+        bottom: 0px;
+        /* position: inherit; */
+        display: flex;
+        grid-column: 1/end;
+        margin: auto 0;
+        span {
+            margin-right: 0px;
+            // margin-left: 20px;
+            cursor: pointer;
+            position: relative;
+            &:hover {
+                * {
+                    fill: $accentColor;
+                }
+            }
+        }
+    }
+}
+
+$color: rgb(0.0, 2.9, 5.7)
