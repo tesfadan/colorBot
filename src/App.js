@@ -53,6 +53,12 @@ export default class App extends Component {
     return this.state.blur ? "mainContainer blur" : "mainContainer ";
   }
 
+  cName() {
+    return this.state.page === "home"
+      ? "inheritContainer home"
+      : "inheritContainer";
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -68,7 +74,7 @@ export default class App extends Component {
             <Create latestCopy={e => this.latestCopy(e)} />
           ) : null}
           <div
-            className="inheritContainer"
+            className={this.cName()}
             style={{ display: this.state.page === "home" ? "block" : "none" }}>
             <React.Fragment>
               <SchemeBox

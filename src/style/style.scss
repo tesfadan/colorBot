@@ -199,6 +199,25 @@ header {
     }
 }
 
+@media(min-width: 1240px) {
+    // header
+    .mainContainer {
+        max-width: 80%;
+    }
+    header {
+        width: 1010px;
+        margin: 0 auto;
+    }
+    .home {
+        .schemesContainer {
+            .scheme {
+                width: calc(33% - 16px);
+                height: 110px;
+            }
+        }
+    }
+}
+
 //
 @media (max-width: 1240px) {
     header,
