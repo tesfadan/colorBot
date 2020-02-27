@@ -1,6 +1,6 @@
 # Color Bot
 
-Color Bot _[https://colorbot-34.web.app]_ is a color scheme generating/sharing web app. Its uses **Vibrant.js** _[https://github.com/akfish/node-vibrant]_</b> to extract prominent colors from an image and presents two schemes for the user to pick. The schemes are then saved on **Googles's Firestore Database** _[https://www.npmjs.com/package/@firebase/firestore]_ if the user chosses to do so.
+Color Bot is a colour scheme generating/sharing Web App. Users can generate colour schemes out of photos and videos. It uses **Vibrant.js** _https://github.com/akfish/node-vibrant_ to extract prominent colours from an image and presents two schemes for the user to pick. The schemes are then saved on the database and available for anyone to use.
 <br>
 Users can copy the color code by simply clicking on the color they like.
 
@@ -21,8 +21,8 @@ Hi! I'm Tesfa. Aspiring front end web developer based in Winnipeg, Canada. I mak
 
 ## Contact
 
-Website: [https://tesfadan.com]
-Twitter: [https://twitter.com/tesfadan]
+Website: https://tesfadan.com
+Twitter: https://twitter.com/tesfadan
 
 <br><br>
 <br><br>
@@ -31,7 +31,7 @@ Twitter: [https://twitter.com/tesfadan]
 
 MIT License
 
-Copyright (c) [2020][tesfa demissie]
+Copyright (c) 2020 tesfa demissie
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
