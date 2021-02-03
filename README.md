@@ -1,6 +1,6 @@
-# Color Bot
+# Modern Color
 
-Color Bot _[https://colorbot-34.web.app]_ is a color scheme generating/sharing web app. Its uses **Vibrant.js** _[https://github.com/akfish/node-vibrant]_</b> to extract prominent colors from an image and presents two schemes for the user to pick. The schemes are then saved on **Googles's Firestore Database** _[https://www.npmjs.com/package/@firebase/firestore]_ if the user chosses to do so.
+Modern Color _[https://moderncolor.cc]_ is a color scheme generating/sharing web app. Its uses **Vibrant.js** _[https://github.com/akfish/node-vibrant]_</b> to extract prominent colors from an image and presents two schemes for the user to pick. The schemes are then saved on **Googles's Firestore Database** _[https://www.npmjs.com/package/@firebase/firestore]_ if the user chosses to do so.
 <br>
 Users can copy the color code by simply clicking on the color they like.
 
@@ -10,13 +10,13 @@ Users can copy the color code by simply clicking on the color they like.
 
 - Ability to adjust colors Before saving
 - Generate more schemes using machine learning model
-- Check and improve accessibility
+- Improve accessibility
 
 <br><br>
 
 ## About Me
 
-Hi! I'm Tesfa. Aspiring front end web developer based in Winnipeg, Canada. I make web applications like this to imporve my skills and better my problem solving abilities.
+Hi! I'm Tesfa. I am a designer and front-end developer in love with building beautiful & functional applications. I aspire to to make a positive impact on the end-users of the products I work on.
 <br><br>
 
 ## Contact
