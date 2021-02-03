@@ -1,6 +1,6 @@
 # Modern Color
 
-Modern Color _[https://moderncolor.cc]_ is a color scheme generating/sharing web app. Its uses **Vibrant.js** _[https://github.com/akfish/node-vibrant]_</b> to extract prominent colors from an image and presents two schemes for the user to pick. The schemes are then saved on **Googles's Firestore Database** _[https://www.npmjs.com/package/@firebase/firestore]_ if the user chosses to do so.
+Modern Color _https://moderncolor.cc_ is a color scheme generating/sharing web app. Its uses **Vibrant.js** https://github.com/akfish/node-vibrant_</b> to extract prominent colors from an image and presents two schemes for the user to pick. The schemes are then saved on **Googles's Firestore Database** _https://www.npmjs.com/package/@firebase/firestore_ if the user chosses to do so.
 <br>
 Users can copy the color code by simply clicking on the color they like.
 
@@ -21,8 +21,8 @@ Hi! I'm Tesfa. I am a designer and front-end developer in love with building bea
 
 ## Contact
 
-Website: [https://tesfadan.com]
-Twitter: [https://twitter.com/tesfadan]
+Website: https://tesfadan.com
+Twitter: https://twitter.com/tesfadan
 
 <br><br>
 <br><br>
