@@ -1,8 +1,6 @@
 # Modern Color
 
-Modern Color _https://moderncolor.cc_ is a color scheme generating/sharing web app. Its uses **Vibrant.js** https://github.com/akfish/node-vibrant_</b> to extract prominent colors from an image and presents two schemes for the user to pick. The schemes are then saved on **Googles's Firestore Database** _https://www.npmjs.com/package/@firebase/firestore_ if the user chosses to do so.
-<br>
-Users can copy the color code by simply clicking on the color they like.
+Modern Color is a web application I built to create and store color schemes for my design work. It uses Vibrant.js to extract prominent colors from an image. It also incorporates Brain.js to check for contrast values for a better user experience. The color schemes are saved for anyone to access from anywhere.
 
 <br><br>
 
