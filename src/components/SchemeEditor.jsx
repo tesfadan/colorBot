@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import { Scheme } from "./Scheme";
 import { Color, Button, ButtonLike } from "../UI";
 import { ColorContext } from "../Context/Context";
 import { SaveScheme } from "../Functions";

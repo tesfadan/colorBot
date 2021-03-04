@@ -1,4 +1,3 @@
-import React from "react";
 export const Color = {
   offWhite: "#FBF9F3",
   offWhite2: "#E7E6E0",

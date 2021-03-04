@@ -4,9 +4,6 @@ import { ColorBox } from "./ColorBox";
 import { Color } from "../UI";
 import { ColorContext } from "../Context/Context";
 import { DeleteScheme } from "../Functions";
-import edit from "../Assets/Icons/edit.svg";
-import trash from "../Assets/Icons/trash.svg";
-import options from "../Assets/Icons/options.svg";
 
 
 

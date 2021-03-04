@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { ColorContext } from "../Context/Context";
 import { CopyToClipboard } from "../Functions"
 import { contrastBrain } from "../Brain";
-import { HexToRgb, FormatRGB, hexTorgb, toRGB, toHSL, toSmallRGB } from "../Brain/Conversion.jsx"
-var convert = require('color-convert');
+import { toRGB, toHSL, toSmallRGB } from "../Brain/Conversion.jsx"
 
 export const ColorBox = ({ color }) => {
   const { format, copied, setCopied } = useContext(ColorContext);

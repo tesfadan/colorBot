@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Color } from "../UI";
 import github from "../Assets/Icons/github.svg";
-import globe from "../Assets/Icons/globe.svg";
 import gear from "../Assets/Icons/gear.svg";
 import home from "../Assets/Icons/home.svg";
 import add from "../Assets/Icons/add.svg";

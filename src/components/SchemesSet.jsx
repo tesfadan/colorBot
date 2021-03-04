@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Scheme } from "./Scheme";
 import { FetchSchemes } from "../Functions"
 import { ColorContext } from "../Context/Context";
-import { Button } from "../UI";
 
 export const SchemesSet = () => {
   const { schemes, setSchemes, mode } = useContext(ColorContext);

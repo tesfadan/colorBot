@@ -7,7 +7,6 @@ import { toHSL, toRGB } from '../Brain/Conversion';
 
 export const Copied = () => {
     const { format, copied } = useContext(ColorContext);
-    const [fadeOut, setFadeOut] = useState(false);
     // console.log(net.run([HexToRgb(copied.color).r, HexToRgb(copied.color).g, HexToRgb(copied.color).b]));
 
     // useEffect(() => { setTimeout(() => setFadeOut(true), 2000) }, !fadeOut);
