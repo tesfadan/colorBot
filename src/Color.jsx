@@ -1,9 +1,7 @@
 import React from "react";
 import Home from "./Pages/Home";
-import "./Style/Global.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from "./Components/Header.jsx";
-import { Footer } from "./Components/Footer.jsx";
 
 const Color = () => {
     return (
@@ -13,7 +11,6 @@ const Color = () => {
                 <Switch>
                     <Route path="/" children={<Home />} />
                 </Switch>
-                {/* <Footer /> */}
             </Router>
         </div>
     );

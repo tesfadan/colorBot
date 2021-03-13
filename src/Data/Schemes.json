@@ -1,47 +1,29 @@
 [{
-        "id": 1,
-        "name": "Sudo Retro",
         "colors": ["#180C24", "#2B159E", "#D8DCE8", "#FFFFFF"]
 
     },
     {
-        "id": 2,
-        "name": "1970",
         "colors": ["#000002", "#4C85F9", "#DCE7FB", "#FFFFFF"]
     },
     {
-        "id": 3,
-        "name": "Bright Future",
         "colors": ["#6083FF", "#C49FD2", "#D2E1F6", "#E5EEFD"]
     },
     {
-        "id": 4,
-        "name": "Dusk",
         "colors": ["#1B1C1E", "#FFB200", "#EDEDED", "#FDFDFD"]
     },
     {
-        "id": 6,
-        "name": "Verzache",
         "colors": ["#0A2455", "#2A76BF", "#FFCB15", "#F2FAF7"]
     },
     {
-        "id": 7,
-        "name": "Far Away",
         "colors": ["#02002E", "#5D52F0", "#F5D445", "#FFE1B5"]
     },
     {
-        "id": 9,
-        "name": "Stoic",
         "colors": ["#181D3D", "#F75465", "#CDCFE8", "#EEEFF6"]
     },
     {
-        "id": 9,
-        "name": "Stoic",
         "colors": ["#330A58", "#F73F71", "#57CCF7", "#F7F6FE"]
     },
     {
-        "id": 9,
-        "name": "Stoic",
         "colors": ["#1E2843", "#3A445D", "#F78C94", "#F9FFFF"]
     }
 ]
