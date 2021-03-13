@@ -7,9 +7,9 @@ import { ColorContext } from "../Context/Context";
 export const SchemesSet = () => {
   const { schemes, setSchemes, mode } = useContext(ColorContext);
   const [loaded, setLoaded] = useState(false);
-  useEffect(() =>
-    FetchSchemes({ setSchemes, setLoaded })
-    , !loaded)
+  // useEffect(() =>
+  //   FetchSchemes({ setSchemes, setLoaded })
+  //   , !loaded)
   return (
     <Container>
       {schemes.map((scheme, index) => <Scheme scheme={scheme} index={index} dashboard={mode.dashboard} />)}

@@ -9,14 +9,11 @@ export const ColorBox = ({ color }) => {
   const { format, copied, setCopied } = useContext(ColorContext);
   const [time, setTime] = useState(5000)
   const copy = ({ color }) => {
-    // const hide = setTimeout(() => setCopied(copied, { color: '' }), 3500);
-    // clearTimeout(hide);
     const contrast = contrastBrain.run([toSmallRGB(color)[0], toSmallRGB(color)[1], toSmallRGB(color)[2]]);
     setCopied({ color: color, state: true, hide: false, contrast });
     CopyToClipboard(format === 'hsl' ? toHSL(color) : format === 'rgb' ? toRGB(color) : color)
     setTimeout(() => setCopied({ color: color, state: true, hide: true, contrast, }), time);
   }
-
 
   return (
     <Container
@@ -25,6 +22,7 @@ export const ColorBox = ({ color }) => {
     />
   );
 };
+
 const Container = styled.span`
   width: 80px;
   height: 80px;

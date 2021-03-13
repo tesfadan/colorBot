@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Color, Button, ButtonLike } from "../UI";
 import { ColorContext } from "../Context/Context";
 import { SaveScheme } from "../Functions";
-import { PaletteFromUrl } from "../Brain/Vibrant";
 
 export const SchemeEditor = ({ }) => {
     const { setMode, mode, setSchemes, schemes } = useContext(ColorContext);
@@ -16,9 +15,6 @@ export const SchemeEditor = ({ }) => {
                 <li><input type="color" id="color2" name="color2" value={colors[2]} onChange={e => setColors({ ...colors, [2]: e.target.value })} style={{ backgroundColor: ` ${Color.offWhite}` }} /></li>
             </ul>
 
-            {mode.new ? <>
-                <input className="fromURL" placeholder="Paste Image url" onChange={(e) => PaletteFromUrl({ url: e.target.value, setColors: setColors })} />
-            </> : null}
 
             <div className="actions">
                 <Button onClick={() => setMode({ ...mode, edit: false })}> Cancel</Button>

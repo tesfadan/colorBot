@@ -3,8 +3,8 @@ import { Home } from "./Home";
 import "./Style/Global.scss";
 import { Dashboard } from "./Dashboard";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Header } from "./Components/Header";
-import { Footer } from "./Components/Footer";
+import { Header } from "./Components/Header.jsx";
+import { Footer } from "./Components/Footer.jsx";
 import { ColorContext } from "./Context/Context";
 const Color = () => {
     const { mode, setMode } = useContext(ColorContext);
