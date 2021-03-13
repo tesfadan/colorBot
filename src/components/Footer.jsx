@@ -59,6 +59,7 @@ export const Footer = ({ }) => {
 
 const Container = styled.div`
   position: fixed;
+  position: sticky;
   bottom: 0px;
   padding: 28px 32px;
   display: flex;
@@ -66,6 +67,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   background-color: ${Color.offWhite};
+  background-color: #180C24;
   z-index: 10;
   .tesfadan {
     padding: 8px;
