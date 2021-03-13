@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap');
 @import "../../../Resources/css/reset.scss";
 $black: #2B2B2B;
+$card: #1f2131;
+$background: #180C24;
 $offWhite: #FBF9F3;
 $offWhite2: #E7E6E0;
-html {
-    background-color: $offWhite;
-}
-
 * {
     font-family: 'Manrope', sans-serif;
     font-size: 15px;
+}
+
+html {
+    background: $background;
 }
 
 .hover {
@@ -17,7 +19,8 @@ html {
     transition: 0.08s ease-in-out;
     @media not all and (hover: none) {
         &:hover {
-            background-color: $offWhite2;
+            color: #181D3D;
+            background: #180C2420;
         }
     }
 }

@@ -1,6 +1,3 @@
-import React from 'react';
-// import brain from 'brain.js'
-// const brain = require('brain.js');
 import * as brain from 'brain.js';
 
 // provide optional config object (or undefined). Defaults shown.

@@ -5,6 +5,7 @@ import github from "../Assets/Icons/github.svg";
 import gear from "../Assets/Icons/gear.svg";
 import home from "../Assets/Icons/home.svg";
 import add from "../Assets/Icons/add.svg";
+import globe from "../Assets/Icons/globe.svg";
 import { Link } from "react-router-dom";
 import { ColorContext } from "../Context/Context";
 
@@ -37,13 +38,13 @@ export const Footer = ({ }) => {
       </span>
 
       <span className="socials">
-        {/* <a
+        <a
           className="tesfadan hover"
           href="https://tesfadan.com"
           rel="noopener noreferrer"
           target="_blank">
           <img src={globe} alt="to tesfadan.com" />
-        </a> */}
+        </a>
         <a
           href="https://github.com/tesfadan"
           target="_blank"
@@ -58,6 +59,7 @@ export const Footer = ({ }) => {
 
 const Container = styled.div`
   position: fixed;
+  position: sticky;
   bottom: 0px;
   padding: 28px 32px;
   display: flex;
@@ -65,6 +67,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   background-color: ${Color.offWhite};
+  background-color: #180C24;
   z-index: 10;
   .tesfadan {
     padding: 8px;

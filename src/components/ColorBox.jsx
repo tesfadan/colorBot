@@ -1,46 +1,123 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
-import { ColorContext } from "../Context/Context";
-import { CopyToClipboard } from "../Functions"
+import { Copy } from "../Assets/Icons";
 import { contrastBrain } from "../Brain";
-import { toRGB, toHSL, toSmallRGB } from "../Brain/Conversion.jsx"
+import { toHSL, toRGB, toSmallRGB } from "../Brain/Conversion.jsx";
+import { ColorContext } from "../Context/Context";
+import { CopyToClipboard } from "../Functions";
 
 export const ColorBox = ({ color }) => {
-  const { format, copied, setCopied } = useContext(ColorContext);
-  const [time, setTime] = useState(5000)
+  const { format } = useContext(ColorContext);
+  const [copied, setCopied] = useState(false)
+  var contrast = contrastBrain.run([toSmallRGB(color)[0], toSmallRGB(color)[1], toSmallRGB(color)[2]]);
   const copy = ({ color }) => {
-    // const hide = setTimeout(() => setCopied(copied, { color: '' }), 3500);
-    // clearTimeout(hide);
-    const contrast = contrastBrain.run([toSmallRGB(color)[0], toSmallRGB(color)[1], toSmallRGB(color)[2]]);
-    setCopied({ color: color, state: true, hide: false, contrast });
+    setCopied(true)
     CopyToClipboard(format === 'hsl' ? toHSL(color) : format === 'rgb' ? toRGB(color) : color)
-    setTimeout(() => setCopied({ color: color, state: true, hide: true, contrast, }), time);
   }
-
+  const formated = (format === 'hsl' ? toHSL(color) : format === 'rgb' ? toRGB(color) : color);
 
   return (
     <Container
       color={color}
       onClick={(e) => copy({ color })}
-    />
+      style={{ color: contrast.dark > contrast.light ? "#fffff0" : "#232D50" }}
+    >
+      {copied ?
+        <div className="message"
+          onAnimationEnd={() => setCopied(false)}
+        >
+          <h3>{formated}</h3>
+        </div>
+        : <Copy color={contrast.dark > contrast.light ? "#fffff0" : "#232D50"} />}
+
+    </Container>
   );
 };
+
 const Container = styled.span`
-  width: 80px;
-  height: 80px;
+  width: 100%;
+  height: 100%;
   background-color: ${props => props.color};
   cursor: pointer;
-  transition: 0.15s ease-in-out;
   position: relative;
   top: 0px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
 
-  @media (max-width: 580px) {
-    width: 60px;
-    height: 60px;
+
+  svg{
+    height: 24px;
+    opacity: 0;
+    transition: 0.12s ease-in;
+    transform: scale(1.15);
   }
 
-  @media (max-width: 420px) {
-    width: calc(100vw / 3 - 14px);
-    height: calc(100vw / 3 - 14px);
+  @keyframes showClipboard {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  &:hover, &:focus{
+    svg{
+      animation: showClipboard 0.25s ease-in;
+      opacity: 0.8;
+      transform: scale(1);
+    }
+  }
+
+  &:active{
+    svg{
+      transform: scale(0.9);
+    }
+  }
+
+  .message{
+      font-size: 32px;
+      animation: showMessage 2s ease;
+      text-align: center;
+      h3{
+        margin:0px;
+        font-size: 24px;
+        font-weight:700;
+        text-align: center;
+      }
+  }
+
+  @keyframes showMessage {
+    0%{
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    10%{
+      opacity:1
+    }
+    20%{
+      transform: scale(1);
+    }
+    90%{
+      opacity:1;
+      transform: scale(1);
+    }
+    100%{
+      opacity:0;
+      transform: scale(0.6);
+    }
+  }
+
+  @media (max-width: 640px){
+    .message h3{
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 340px){
+    .message h3{
+      font-size: 14px;
+    }
   }
 `;

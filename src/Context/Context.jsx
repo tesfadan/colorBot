@@ -3,15 +3,10 @@ export const ColorContext = createContext();
 
 export const initialState = {
     schemes: [
-        { uid: "", colors: ["#AC57BC", "#95B9E3", "#F7CC6C"] },
-        { uid: "", colors: ["#002957", "#FE562D", "#FE9147"] },
-        { uid: "", colors: ["#674BCA", "#0B0BF5", "#FE552D"] },
-        { uid: "", colors: ["#2B2B2B", "#366769", "#B3D5D6"] },
-        { uid: "", colors: ["#021859", "#0433BF", "#F25CA2"] },
-        { uid: "", colors: ["#0A1747", "#0029FA", "#8D07F6"] }
+        { uid: "", colors: ["#AC57BC", "#95B9E3", "#F7CC6C", "#F7CC6C"] },
     ],
     format: 'hex',
-    copied: { state: false, color: '' },
+    copied: { state: false, color: '', contrast: { dark: '', light: '' }, hide: false },
     mode: { edit: false, scheme: {}, index: '' }
 };
 

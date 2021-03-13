@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import brain from "brain.js";
-import * as Vibrant from "node-vibrant";
+// import * as Vibrant from "node-vibrant";
 import cup from "../src/cup.png";
 import fruits from "../src/fruits.jpg";
 
