@@ -1,5 +1,4 @@
-import * as brain from 'brain.js';
-
+import brain from 'brain.js/src'
 // provide optional config object (or undefined). Defaults shown.
 const config = {
     binaryThresh: 0.5,
