@@ -28,7 +28,7 @@ export const ColorBox = ({ color }) => {
         >
           <h3>{formated}</h3>
         </div>
-        : <Copy color={contrast.dark > contrast.light ? "#fffff0" : "#232D50"} />}
+        : <Copy />}
 
     </Container>
   );
@@ -46,7 +46,7 @@ const Container = styled.span`
   align-items: center;
 
 
-  svg{
+  .copy{
     height: 24px;
     opacity: 0;
     transition: 0.12s ease-in;
@@ -63,7 +63,7 @@ const Container = styled.span`
   }
 
   &:hover, &:focus{
-    svg{
+    .copy{
       animation: showClipboard 0.25s ease-in;
       opacity: 0.8;
       transform: scale(1);
@@ -71,7 +71,7 @@ const Container = styled.span`
   }
 
   &:active{
-    svg{
+    .copy{
       transform: scale(0.9);
     }
   }
