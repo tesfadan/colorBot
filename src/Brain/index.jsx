@@ -21,4 +21,4 @@ contrastBrain.train([
     { input: [0.98, 0.58, 0.33], output: { dark: 0, light: 1 } },
 ]);
 
-const output = contrastBrain.run([1, 1, 1]); // [0.987]
+// const output = contrastBrain.run([1, 1, 1]); // [0.987]

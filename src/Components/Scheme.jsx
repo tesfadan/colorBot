@@ -1,7 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ColorBox } from "./ColorBox";
-import { Color } from "../UI";
 
 export const Scheme = ({ ...props }) => {
   return (
