@@ -27,6 +27,8 @@ function reducer(state, action) {
             return { ...state, copied: action.value };
         case actions.SET_MODE:
             return { ...state, mode: action.value };
+        default:
+            return null
     }
 }
 
